@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Learn Kun — Coming Soon</title>
+  <meta name="description" content="AI Learn Kun single page coming soon" />
+
+  <!-- UIKit CSS framework -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css" as="style" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.13/dist/js/uikit-icons.min.js"></script>
+
+  <style>
+    /* Prevent FOUC */
+    html { background: #0b0b12; }
+    /* Custom styles for layout requirements */
+    :root {
+      --nav-height: 72px;
+      --hero-min-h: 80vh;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #0b0b12;
+      color: #e5e5e5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .uk-navbar-container {
+      background: rgba(11,11,18,0.92);
+      backdrop-filter: blur(12px) saturate(140%);
+      -webkit-backdrop-filter: blur(12px) saturate(140%);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .nav-inner a {
+      color: #e5e5e5;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      transition: color 0.2s ease;
+    }
+    .nav-inner a:hover {
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: var(--hero-min-h);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: url('https://images.unsplash.com/photo-1628498188904-036f5e25e93e?fm=jpg&q=60&w=1600&auto=format&fit=crop') center/cover no-repeat;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(11,11,18,0.35) 0%, rgba(11,11,18,0.65) 60%, rgba(11,11,18,0.92) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 4rem 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 6rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin: 0 0 0.75rem;
+      color: #fff;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.125rem;
+      color: rgba(255,255,255,0.85);
+      margin: 0;
+    }
+
+    /* Layout rules: centered above width, left below width */
+    @media (min-width: 640px) {
+      .hero-content > *, .nav-inner {
+        text-align: left;
+        justify-content: flex-start;
+      }
+      .hero h1, .hero p {
+        text-align: left;
+      }
+    }
+    @media (max-width: 639px) {
+      .hero-content > *, .nav-inner {
+        text-align: center;
+        justify-content: center;
+      }
+      .hero h1, .hero p {
+        text-align: center;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(11,11,18,0.95);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="uk-navbar-container" uk-navbar>
+    <div class="uk-container uk-container-expand">
+      <div class="nav-inner">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Coming Soon</h1>
+      <p>AI Learn Kun is preparing something extraordinary.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="uk-section uk-section-small uk-section-default" style="background:#0f0f15;">
+    <div class="uk-container">
+      <div class="uk-text-center uk-text-left@s">
+        <h2 class="uk-heading-small">About</h2>
+        <p class="uk-text-muted">A lightweight, fast single-page experience built with the UIKit CSS framework.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="uk-section uk-section-small uk-section-default" style="background:#0b0b12;">
+    <div class="uk-container">
+      <div class="uk-text-center uk-text-left@s">
+        <h2 class="uk-heading-small">Contact</h2>
+        <p class="uk-text-muted">Reach out when we're live.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>AI Learn Kun :copyright 2026</p>
+  </footer>
+
+</body>
+</html>
