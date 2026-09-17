@@ -1,0 +1,10 @@
+{
+  "name": "ailearnkun-coming-soon",
+  "version": "1.0.0",
+  "scripts": {
+    "test:build": "python3 -m http.server 8889 --directory . > /dev/null 2>&1 & sleep 1; curl -s -o /dev/null -w '%{http_code} %{size_download}' http://localhost:8889/; echo; kill $(lsof -t -i:8889) 2>/dev/null || true",
+    "deploy:preview": "npx netlify deploy --dir=. --no-build",
+    "deploy:prod": "npx netlify deploy --prod --dir=. --no-build --site=e91e241e-13d2-4326-a48d-fc86da5d4bcf",
+    "deploy:trigger": "npx netlify deploy --trigger --build-only --dir=."
+  }
+}
